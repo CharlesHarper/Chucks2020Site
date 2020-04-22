@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNav, MDBNavItem, MDBNavLink, MDBCollapse, MDBContainer,
-MDBHamburgerToggler } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { MDBNavbar, MDBNav, MDBNavItem, MDBNavLink,  MDBContainer } from 'mdbreact';
 
 class NavChuck extends Component {
 state = {
