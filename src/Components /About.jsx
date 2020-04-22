@@ -31,7 +31,7 @@ class About extends React.Component {
       
         <MDBView
           src={mepic}
-          fixed
+          
         >
 
           <MDBMask className='rgba-white-light' />
@@ -43,12 +43,12 @@ class About extends React.Component {
           <Router>
           <MDBContainer
             className='d-flex justify-content-center align-items-center'
-            style={{ height: '100%', width: '100%', paddingTop: '10rem' }}
+            style={{ height: '100%', width: '100%', paddingTop: '4rem' }}
           >
             <MDBRow>
               <MDBCol md='12' className='mb-4 white-text text-center'>
                   
-                <h1  className='display- mb-0 pt-md-5 pt-5 white-text font-weight-bold'>
+                <h1  className='display- mb-0 pt-md-1 pt-3 white-text font-weight-bold'>
                 <MDBAnimation reveal type="bounceInUp"  duration="7000ms" delay=".5s">
                 Charles
                 

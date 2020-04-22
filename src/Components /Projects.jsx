@@ -1,29 +1,40 @@
-import React from "react";
-import {  MDBRow, MDBCol, MDBCard, MDBIcon,MDBView, MDBBtn,MDBMask } from "mdbreact";
+
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import {
+  MDBRow,
+  MDBCol,
+  MDBBtn,
+  MDBView,
+
+   MDBCard, MDBCardBody, MDBIcon, MDBInput 
+} from 'mdbreact';
 import "../Styles/ParallaxIntro.scss"
 import mepic from "../Images/me.jpeg"
 import NavChuck from "../Components /NavChuck.jsx"
 
-const Projects = () => {
-  return (
-      <div className="container-fluid"> 
+
+class Projects extends React.Component {
+  state = {
+    
+  };
+  render() {
+
+
+    return (
+      <div id='parallaxintro'>
+       
+        
+        
         <MDBView
           src={mepic}
           fixed
         >
-
-          <MDBMask className='rgba-white-light' />
-
-
-          <NavChuck/>
-
-          
-          <Router>
-
-
-<section className='text-center my-5'>
-      <h2 className='h1-responsive font-weight-bold my-5'>My projects</h2>
+          <NavChuck />
+   
+      <Router>
+      <section className='text-center my-5'>
+      <h2 className='h1-responsive font-weight-bold my-5'>Projects</h2>
       <p className='grey-text w-responsive mx-auto mb-5'>
        This is where I would put a bit about myself
       </p>
@@ -119,22 +130,17 @@ const Projects = () => {
         </MDBCol>
       </MDBRow>
     </section>
-
-
-
-          </Router>
-
-
-
-
-
-</MDBView>
-
-
-
+      </Router>
+        </MDBView>
+        
+       
       </div>
-    
-  );
+    );
+  }
 }
 
 export default Projects;
+
+
+
+
