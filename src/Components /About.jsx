@@ -31,6 +31,7 @@ class About extends React.Component {
       
         <MDBView
           src={mepic}
+          fixed
           
         >
 

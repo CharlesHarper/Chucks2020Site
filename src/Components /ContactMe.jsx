@@ -6,7 +6,7 @@ import {
   MDBBtn,
   MDBView,
 
-   MDBCard, MDBCardBody, MDBIcon, MDBInput 
+   MDBCard, MDBCardBody, MDBIcon, MDBInput,MDBMask 
 } from 'mdbreact';
 import "../Styles/ParallaxIntro.scss"
 import mepic from "../Images/me.jpeg"
@@ -21,16 +21,18 @@ class ContactMe extends React.Component {
 
 
     return (
-      <div id='parallaxintro'>
+      <div className="container-fluid" id='parallaxintro'>
        
         
         
         <MDBView
           src={mepic}
           fixed
+          
         >
+          <MDBMask className='rgba-white-light' />
           <NavChuck />
-         <section className="my-5 pt-5">
+         <section className="my-5 pt-5" style={{ opacity: '.9' }}>
       <h2 className="h1-responsive font-weight-bold text-center my-5">
         Contact Me
       </h2>

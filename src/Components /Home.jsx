@@ -7,7 +7,8 @@ import {
   MDBBtn,
   MDBView,
   MDBContainer,
-  MDBAnimation
+  MDBAnimation,
+  
 } from 'mdbreact';
 import "../Styles/ParallaxIntro.scss"
 import mepic from "../Images/me.jpeg"
@@ -21,21 +22,16 @@ class Home extends React.Component {
   };
 
 
-  render() {
+render() {
     return (
      
       <div className="container-fluid" id='parallaxintro'>
-       
-       
-   
-      
-        <MDBView
+       <MDBView
           src={mepic}
+          fixed
           
         >
-
           <MDBMask className='rgba-white-light' />
-
 
           <NavChuck/>
 

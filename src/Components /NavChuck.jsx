@@ -24,7 +24,7 @@ render() {
   
   const navStyle = {
     color: "white",
-    backgroundColor: "rgb(63,81,181, 0.2)",
+    backgroundColor: "rgb(255,255,255, 0.4)",
     padding: "10px",
     fontFamily: "Arial",
     marginTop: "10px",
