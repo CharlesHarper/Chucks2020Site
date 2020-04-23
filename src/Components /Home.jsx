@@ -25,7 +25,7 @@ class Home extends React.Component {
 render() {
     return (
      
-      <div className="container-fluid" id='parallaxintro'>
+      <div >
        <MDBView
           src={mepic}
           fixed
@@ -64,7 +64,7 @@ render() {
                       And Entrepreneur 
                   </MDBAnimation>
                 </h5>
-                <MDBAnimation reveal type="bounceInUp"  duration="7000ms" delay="1.8s">
+                <MDBAnimation reveal type="bounceInUp"  duration="7000ms" delay="1.6s">
                 <MDBBtn
                   className='btn-indigo'
                   size='lg'

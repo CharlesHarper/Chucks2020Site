@@ -21,7 +21,7 @@ class ContactMe extends React.Component {
 
 
     return (
-      <div className="container-fluid" id='parallaxintro'>
+      <div >
        
         
         
@@ -37,6 +37,7 @@ class ContactMe extends React.Component {
         Contact Me
       </h2>
       <Router>
+      <div className="container-fluid" id='parallaxintro'>
       <MDBRow>
         <MDBCol lg="5" className="lg-0 mb-4">
           <MDBCard>
@@ -107,11 +108,13 @@ class ContactMe extends React.Component {
             />
           </div>
           <br />
-          <MDBRow className="text-center">
-            <MDBCol md="4">
+          <div style={{ backgroundColor: "rgb(255,255,255, 0.4)" }} >   
+
+          <MDBRow className="text-center" >
+            <MDBCol md="4" >
               <MDBBtn tag="a" floating color="blue" className="accent-1">
                 <MDBIcon icon="map-marker-alt" />
-              </MDBBtn>
+              </MDBBtn >
               <p>Miami, Florida</p>
               <p className="mb-md-0">United States</p>
             </MDBCol>
@@ -130,9 +133,13 @@ class ContactMe extends React.Component {
               <p className="mb-md-0">sale@gmail.com</p>
             </MDBCol>
           </MDBRow>
+
+          </div>
+          
         </MDBCol>
         
       </MDBRow>
+      </div>
       </Router>
     </section>
         </MDBView>

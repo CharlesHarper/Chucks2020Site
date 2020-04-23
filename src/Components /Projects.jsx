@@ -24,7 +24,7 @@ class Projects extends React.Component {
 
 
     return (
-      <div className="container-fluid" id='parallaxintro'>
+      <div >
        
         
         
@@ -36,6 +36,7 @@ class Projects extends React.Component {
           <NavChuck />
    
       <Router>
+      <div className="container-fluid " id='parallaxintro' >
       <section className='text-center my-5'>
       <h2 className='h1-responsive font-weight-bold my-5'>Projects</h2>
       <p className='grey-text w-responsive mx-auto mb-5'>
@@ -133,6 +134,7 @@ class Projects extends React.Component {
         </MDBCol>
       </MDBRow>
     </section>
+    </div>
       </Router>
         </MDBView>
         
