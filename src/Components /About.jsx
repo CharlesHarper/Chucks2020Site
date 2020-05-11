@@ -4,10 +4,16 @@ import {
   MDBMask,
   MDBRow,
   MDBCol,
-  MDBBtn,
+  MDBCollapseHeader,
   MDBView,
   MDBContainer,
-  MDBAnimation
+  MDBCard,
+  MDBCardBody,
+  MDBCollapse,
+  MDBIcon
+
+
+  
 } from 'mdbreact';
 import "../Styles/ParallaxIntro.scss"
 import mepic from "../Images/me.jpeg"
@@ -17,26 +23,23 @@ import NavChuck from "../Components /NavChuck.jsx"
 
 class About extends React.Component {
   state = {
-    
+    collapseID: "collapse0"
   };
+  toggleCollapse = collapseID => () =>
+  this.setState(prevState => ({
+    collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+  }));
 
-
-  render() {
+render() {
     return (
      
-      <div className="container-fluid" id='parallaxintro'>
-       
-       
-   
-      
-        <MDBView
+      <div >
+       <MDBView
           src={mepic}
           fixed
           
         >
-
           <MDBMask className='rgba-white-light' />
-
 
           <NavChuck/>
 
@@ -44,44 +47,124 @@ class About extends React.Component {
           <Router>
           <MDBContainer
             className='d-flex justify-content-center align-items-center'
-            style={{ height: '100%', width: '100%', paddingTop: '4rem' }}
+            style={{ paddingTop: '5%' }}
           >
-            <MDBRow>
-              <MDBCol md='12' className='mb-4 white-text text-center'>
-                  
-                <h1  className='display- mb-0 pt-md-1 pt-3 white-text font-weight-bold'>
-                <MDBAnimation reveal type="bounceInUp"  duration="7000ms" delay=".5s">
-                Charles
-                
-                  <span className='indigo-text font-weight-bold'> Harper</span>
-                  
-                  </MDBAnimation>
-                </h1>
-                <MDBAnimation reveal type="bounceInUp"  duration="7000ms" delay=".8s">
-                <hr className='hr-light my-4' />
-                </MDBAnimation>
-               
-                <h5 className='text-uppercase pt-md-3 pt-sm-2 pt-3 pb-md-3 pb-sm-3 pb-5 white-text font-weight-bold'>
-                <MDBAnimation reveal type="bounceInUp"  duration="7000ms" delay="1s" className="pb-3">
-                  Professional Web Developer
-                  </MDBAnimation>
-                  <MDBAnimation reveal type="bounceInUp"  duration="7000ms" delay="1.4s" className="pt-3">
-                      And Entrepreneur 
-                  </MDBAnimation>
-                </h5>
-                <MDBAnimation reveal type="bounceInUp"  duration="7000ms" delay="1.8s">
-                <MDBBtn
-                  className='btn-indigo'
-                  size='lg'
-                  href='https://github.com/CharlesHarper'
-                  target='_blank'
-                  
-                >
-                  My GitHub
-                </MDBBtn>
-                </MDBAnimation>
+             <MDBCard
+          className="card-image"
+        
+        >
+          <div className="py-5 px-4"
+       
+          >
+            <MDBRow className="d-flex justify-content-center" >
+              <MDBCol md="10" xl="8">
+                <MDBContainer className="accordion md-accordion accordion-5">
+                  <MDBCard className="mb-4">
+                    <MDBCollapseHeader
+                      onClick={this.toggleCollapse("collapse1")}
+                      className="p-0 z-depth-1"
+                      tag="h4"
+                      tagClassName="text-uppercase white-text mb-0 d-flex justify-content-start align-items-center"
+                    >
+                      <div
+                        className="d-flex justify-content-center align-items-center mr-4"
+                        style={{ backgroundColor: "#fff", minWidth: "100px" }}
+                      >
+                        <MDBIcon
+                          icon="cloud"
+                          size="2x"
+                          className="m-3 black-text "
+                        />
+                      </div>
+                      Past 
+                    </MDBCollapseHeader>
+
+                    <MDBCollapse id="collapse1" isOpen={this.state.collapseID}>
+                      <MDBCardBody className="rgba-black-light white-text z-depth-1">
+                        <p className="p-md-4 mb-0">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid. 3 wolf moon
+                          officia aute, non cupidatat skateboard dolor brunch.
+                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et.
+                        </p>
+                      </MDBCardBody>
+                    </MDBCollapse>
+                  </MDBCard>
+
+                  <MDBCard className="mb-4">
+                    <MDBCollapseHeader
+                      onClick={this.toggleCollapse("collapse2")}
+                      className="p-0 z-depth-1"
+                      tag="h4"
+                      tagClassName="text-uppercase white-text mb-0 d-flex justify-content-start align-items-center"
+                    >
+                    <div
+                        className="d-flex justify-content-center align-items-center mr-4"
+                        style={{ backgroundColor: "#fff", minWidth: "100px" }}
+                      >
+                      <MDBIcon
+                        icon="comment-alt"
+                        size="2x"
+                        className="m-3 black-text"
+                      />
+                      </div>
+                      Present
+                    </MDBCollapseHeader>
+
+                    <MDBCollapse id="collapse2" isOpen={this.state.collapseID}>
+                      <MDBCardBody className="rgba-black-light white-text z-depth-1">
+                        <p className="p-md-4 mb-0">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid. 3 wolf moon
+                          officia aute, non cupidatat skateboard dolor brunch.
+                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et.
+                        </p>
+                      </MDBCardBody>
+                    </MDBCollapse>
+                  </MDBCard>
+
+                  <MDBCard className="mb-4">
+                    <MDBCollapseHeader
+                      onClick={this.toggleCollapse("collapse3")}
+                      className="p-0 z-depth-1"
+                      tag="h4"
+                      tagClassName="text-uppercase white-text mb-0 d-flex justify-content-start align-items-center"
+                    >
+                    <div
+                        className="d-flex justify-content-center align-items-center mr-4"
+                        style={{ backgroundColor: "#fff", minWidth: "100px" }}
+                      >
+                      <MDBIcon
+                        icon="cogs"
+                        size="2x"
+                        className="m-3 black-text"
+                      />
+                      </div>
+                      Future 
+                    </MDBCollapseHeader>
+
+                    <MDBCollapse id="collapse3" isOpen={this.state.collapseID}>
+                      <MDBCardBody className="rgba-black-light white-text z-depth-1">
+                        <p className="p-md-4 mb-0">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid. 3 wolf moon
+                          officia aute, non cupidatat skateboard dolor brunch.
+                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et.
+                        </p>
+                      </MDBCardBody>
+                    </MDBCollapse>
+                  </MDBCard>
+                </MDBContainer>
               </MDBCol>
             </MDBRow>
+          </div>
+        </MDBCard>
            
           </MDBContainer>
           </Router>

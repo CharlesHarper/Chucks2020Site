@@ -22,9 +22,6 @@ class ContactMe extends React.Component {
 
     return (
       <div >
-       
-        
-        
         <MDBView
           src={mepic}
           fixed
@@ -32,7 +29,7 @@ class ContactMe extends React.Component {
         >
           <MDBMask className='rgba-white-light' />
           <NavChuck />
-         <section className="my-5 pt-5" style={{ opacity: '.9' }}>
+         <section className="my-5 pt-2" style={{ opacity: '.9' }}>
       <h2 className="h1-responsive font-weight-bold text-center my-5">
         Contact Me
       </h2>
