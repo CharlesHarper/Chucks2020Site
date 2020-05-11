@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import Projects from "../Components /Projects.jsx"
-
+import FooterChucks from "../Components /FooterChucks.jsx" 
 
 
 class ProjectsView extends Component {
@@ -10,7 +10,7 @@ class ProjectsView extends Component {
         <div >
  
         <Projects/>
-     
+        <FooterChucks />
         
         </div>
     );

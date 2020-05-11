@@ -39,7 +39,7 @@ render() {
           <Router>
           <MDBContainer
             className='d-flex justify-content-center align-items-center'
-            style={{ paddingTop: '15%' }}
+            style={{ paddingTop: '10%' }}
           >
             <MDBRow>
               <MDBCol md='12' className='mb-4 white-text text-center'>

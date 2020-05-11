@@ -18,6 +18,7 @@ import "../Styles/ParallaxIntro.scss";
 import mepic from "../Images/me.jpeg";
 import NavChuck from "../Components /NavChuck.jsx";
 
+
 class About extends React.Component {
   state = {
     collapseID: "collapse0"
@@ -36,27 +37,20 @@ class About extends React.Component {
           <NavChuck />
 
           <Router>
-          <MDBAnimation
-              reveal
-              type="bounceInUp"
-            
-              duration="10s"
-              >
-          <h1
-                className="d-flex justify-content-center align-items-center"
+            <MDBAnimation reveal type="bounceInUp" duration="10s">
+              <h1
+                className="d-flex justify-content-center text-uppercase align-items-center"
                 style={{ paddingTop: "4%", color: "blue", fontWeight: "700" }}
               >
                 About Me
               </h1>
-              </MDBAnimation>
+            </MDBAnimation>
             <MDBAnimation
               reveal
               type="bounceInUp"
               duration="7000ms"
               delay=".5s"
-              className="pb-3"
             >
-              
               <MDBContainer
                 className="d-flex justify-content-center align-items-center"
                 style={{ paddingTop: "1%" }}
@@ -198,7 +192,9 @@ class About extends React.Component {
                 </MDBCard>
               </MDBContainer>
             </MDBAnimation>
+           
           </Router>
+          
         </MDBView>
       </div>
     );
